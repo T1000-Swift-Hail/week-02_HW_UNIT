@@ -20,7 +20,7 @@
 - method speak(), print "Speaking..."
 
 ## Create an extension to class Artist . Add the following method:
-- func doPainting(payment : Int)
+- func )
 - the method doPainting(payment : Int) accepts a pyament of 500 or more . Using a guard , throw an error of type PaymentError.paymentLow if the payment is less than 500 .
 - If No errors thrown , the method doPainting(payment : Int) prints "Your Painting is Done."
 
