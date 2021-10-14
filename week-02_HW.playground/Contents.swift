@@ -16,10 +16,15 @@ enum PaymentError:Error {
 }
 
 class Artist: Person {
-    var name: String = ""
-    var birthPlace: String = ""
-    var age: Int = 0
+    var name: String
+    var birthPlace: String
+    var age: Int
     
+    init (name:String,age:Int,birthPlace:String) {
+        self.name = name
+        self.age = age
+        self.birthPlace = birthPlace
+    }
     func run() {
         print("RUNNING!!")
     }
@@ -32,6 +37,7 @@ class Artist: Person {
     func walk() {
         print("Walking...")
     }
+    
 }
 
 extension Artist {
@@ -43,8 +49,10 @@ extension Artist {
     }
 }
 
+var ahmed = Artist(name: "ahmed", age: 25, birthPlace: "Riyadh")
+
 do {
-    let pay = try ahmed.doPainting(Payment:501)
+    let pay = try ahmed.doPainting(Payment:400)
     print(pay)
 }
 catch PaymentError.paymentLow {
@@ -53,9 +61,8 @@ catch PaymentError.paymentLow {
 catch {
     print("An unknow error occurred: \(error)")
 }
-var ahmed:Artist = Artist()
 
-ahmed.walk()
+
 
 struct Doctor: Person {
     var name: String
@@ -83,7 +90,8 @@ struct Doctor: Person {
     }
 }
 
-var nora = Doctor(name: "Nora", birthPlace: "Hail", age: 32, specialization: "General doctor")
+
+var nora = Doctor(name: "Nora", birthPlace: "Hail", age: 32, specialization: "A General doctor")
 
 nora.run()
 nora.description()
