@@ -39,10 +39,7 @@ class Artist : Person {
 extension Artist {
     
     func doPainting(payment : Int) throws -> String{
-        guard payment >= 500 else {
-            
-                throw PaymentError.paymentLow
-            }
+        guard payment >= 500 else { throw PaymentError.paymentLow }
             return "Your Painting is Done."
         }
     }
@@ -75,5 +72,7 @@ struct Doctor : Person {
         print("Speaking...") }
 }
 
-let Nora = Doctor(name: "Nora", birthPlace: "Hail", age: 31, specialization: "surgery")
-print(Nora.description)
+let nora = Doctor(name: "Nora", birthPlace: "Hail", age: 31, specialization: "surgery")
+print("")
+nora.run()
+print(nora.description)
