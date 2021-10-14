@@ -58,7 +58,7 @@ var ahmed = Artist(name: "ahmed", birthPlace: "Hail", age: 28)
 
 
 do {
-    let order = try ahmed.doPainting(paymentthrough:580)
+    let order = try ahmed.doPainting(paymentthrough:400)
     print(order)
 } catch payment.paymentLow {
     print("Your pyment low")
